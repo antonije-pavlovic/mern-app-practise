@@ -71,9 +71,7 @@ export default class EditExercise extends Component {
             date: this.state.date,
         };
 
-        console.log(exercise);
-       const updatedExercise =  await axios.post(`http://localhost:5000/exercises/update/${ this.props.match.params.id }`, exercise);
-        console.log(updatedExercise);
+        await axios.post(`http://localhost:5000/exercises/update/${ this.props.match.params.id }`, exercise);
         window.location = '/'
     };
 

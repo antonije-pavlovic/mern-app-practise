@@ -62,7 +62,6 @@ export default class CreateExercise extends Component {
             date: this.state.date,
         };
 
-        console.log(exercise);
         await axios.post('http://localhost:5000/exercises/add', exercise);
 
         window.location = '/'
